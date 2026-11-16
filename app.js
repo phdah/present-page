@@ -47,6 +47,52 @@ form.addEventListener('submit', (event) => {
       success.hidden = false;
       document.body.classList.remove('is-unlocking');
       success.focus({ preventScroll: true });
+      startJourney();
     }, reducedMotion ? 0 : 510);
   }, reducedMotion ? 0 : 480);
 });
+
+
+// The reveal is progressive and visual, never required for the information to be readable.
+function startJourney() {
+  const root = document.getElementById('success-screen');
+  if (!root) return;
+
+  const targets = typeof root.querySelectorAll === 'function'
+    ? Array.from(root.querySelectorAll('[data-reveal]'))
+    : [];
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+
+  if (reduceMotion || typeof window.IntersectionObserver !== 'function') {
+    targets.forEach((target) => target.classList.add('is-visible'));
+  } else {
+    const observer = new window.IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    }, { threshold: 0.12, rootMargin: '0px 0px 70px 0px' });
+    targets.forEach((target) => observer.observe(target));
+  }
+
+  const progress = document.getElementById('scroll-progress');
+  const update = () => {
+    if (root.hidden) return;
+    const documentHeight = document.documentElement?.scrollHeight ?? 0;
+    const viewport = window.innerHeight ?? 0;
+    const scrollY = window.scrollY ?? 0;
+    const denominator = documentHeight - viewport;
+    if (progress?.style) {
+      progress.style.width = (denominator > 0
+        ? Math.min(100, Math.max(0, (scrollY / denominator) * 100))
+        : 0) + '%';
+    }
+    if (!reduceMotion) {
+      root.style?.setProperty?.('--story-scroll', String(Math.min(scrollY, 1400)));
+    }
+  };
+  window.addEventListener?.('scroll', update, { passive: true });
+  window.addEventListener?.('resize', update);
+  update();
+}
