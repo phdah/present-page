@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121b28" />
+    <meta name="description" content="En liten hemlighet, bara för dig." />
+    <title>En liten hemlighet</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <main class="page">
+      <div class="brand" aria-hidden="true"><span class="brand-symbol">✳</span> ett litet mysterium</div>
+
+      <section id="login-screen" class="card" aria-labelledby="login-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> EN PRESENT, EN HEMLIGHET</div>
+        <div class="number-decoration" aria-hidden="true">30<span>✦</span></div>
+        <h1 id="login-title">Vissa saker är värda att vänta på<span class="period">.</span></h1>
+        <p class="intro">Men först behöver du låsa upp din överraskning.</p>
+
+        <form id="code-form" novalidate>
+          <label for="code-input">Din hemliga kod</label>
+          <div class="field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4.5" y="10.5" width="15" height="11" rx="2.4"></rect>
+                <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path>
+                <path d="M12 15v2.5"></path>
+              </svg>
+            </span>
+            <input
+              id="code-input"
+              name="code"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              maxlength="6"
+              autocomplete="off"
+              enterkeyhint="go"
+              placeholder="······"
+              aria-describedby="code-hint code-message"
+              required
+            />
+          </div>
+          <p id="code-hint" class="hint">Sex siffror. Ett datum du aldrig glömmer.</p>
+          <p id="code-message" class="feedback" role="status" aria-live="polite"></p>
+          <button type="submit" id="unlock-button">
+            <span>Lås upp min present</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </form>
+
+        <div class="card-footer" aria-hidden="true"><span>✧</span> Bara för dig <span>✧</span></div>
+      </section>
+
+      <section id="success-screen" class="card success-card" aria-labelledby="success-title" hidden tabindex="-1">
+        <div class="eyebrow"><span class="eyebrow-line"></span> UPPLÅST</div>
+        <div class="success-symbol" aria-hidden="true">✦</div>
+        <h1 id="success-title">Du hittade rätt<span class="period">.</span></h1>
+        <p class="intro">Grattis på 30-årsdagen, älskling!</p>
+        <div class="success-divider" aria-hidden="true"><span>♡</span></div>
+        <p class="next-chapter">Det här är bara början på ditt nästa lilla äventyr.</p>
+        <p class="coming-soon">Fortsättning följer…</p>
+      </section>
+
+      <p class="page-footer">Gjort med <span aria-label="kärlek">♥</span> bara för dig</p>
+    </main>
+  </body>
+</html>
