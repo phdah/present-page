@@ -61,14 +61,112 @@
         <div class="card-footer" aria-hidden="true"><span>✧</span> Bara för dig <span>✧</span></div>
       </section>
 
-      <section id="success-screen" class="card success-card" aria-labelledby="success-title" hidden tabindex="-1">
-        <div class="eyebrow"><span class="eyebrow-line"></span> UPPLÅST</div>
-        <div class="success-symbol" aria-hidden="true">✦</div>
-        <h1 id="success-title">Du hittade rätt<span class="period">.</span></h1>
-        <p class="intro">Grattis på 30-årsdagen, älskling!</p>
-        <div class="success-divider" aria-hidden="true"><span>♡</span></div>
-        <p class="next-chapter">Det här är bara början på ditt nästa lilla äventyr.</p>
-        <p class="coming-soon">Fortsättning följer…</p>
+      <section id="success-screen" class="journey" aria-labelledby="journey-title" hidden tabindex="-1">
+        <div class="journey-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+
+        <header class="journey-hero">
+          <div class="journey-hero__inner">
+            <p class="journey-kicker">EN PRESENT TILL EMMA · 21 NOVEMBER 2026</p>
+            <p class="journey-overline">Du hittade rätt <span aria-hidden="true">✦</span></p>
+            <h1 id="journey-title">Det väntar ett <em>äventyr</em> på oss.</h1>
+            <p class="journey-lead">Tänk solvarma berg, öppna landskap, hästar och lite tid bara för oss två.</p>
+            <a class="journey-scroll" href="#reveal-intro">Följ med <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <div class="journey-landscape" aria-hidden="true">
+            <div class="landscape-sun"></div>
+            <svg class="landscape-mountains" viewBox="0 0 1200 460" preserveAspectRatio="none" focusable="false">
+              <path class="mountain-back" d="M0 286 108 191 218 247 355 127 479 244 624 114 771 250 919 157 1060 240 1200 161 1200 460 0 460Z"/>
+              <path class="mountain-mid" d="M0 329 173 240 303 294 475 212 601 292 783 217 958 288 1105 215 1200 257 1200 460 0 460Z"/>
+              <path class="mountain-front" d="M0 390 178 344 365 377 536 321 725 361 897 328 1051 370 1200 325 1200 460 0 460Z"/>
+            </svg>
+            <svg class="horse-silhouette" viewBox="0 0 340 280" focusable="false">
+              <path d="M79 151 C69 137 60 117 70 102 C61 120 59 151 74 171Z"/>
+              <path d="M80 148 C101 126 170 120 216 142 C228 147 233 154 237 171 C215 199 131 204 89 180Z"/>
+              <path d="M205 149 C216 120 230 107 237 78 L253 53 266 58 274 84 262 116 240 158Z"/>
+              <path d="M250 56 250 36 259 30 268 63Z"/>
+              <path d="M262 61 271 39 280 43 275 78Z"/>
+              <path d="M262 79 285 85 294 105 283 121 260 112Z"/>
+              <path d="M104 180 98 254 110 254 128 189Z"/>
+              <path d="M156 187 164 256 176 256 179 190Z"/>
+              <path d="M213 177 223 254 235 254 235 175Z"/>
+              <path d="M88 177 79 247 90 250 111 186Z"/>
+              <path d="M208 141 C229 129 239 100 242 72 C225 100 215 116 194 128Z"/>
+            </svg>
+            <div class="landscape-grain"></div>
+          </div>
+          <div class="hero-coordinate" aria-hidden="true">36°35′ N · 4°37′ W</div>
+        </header>
+
+        <section class="journey-section intro-section" id="reveal-intro" data-reveal>
+          <div class="section-number">01 / EN LITEN LEDTRÅD</div>
+          <div class="story-intro">
+            <p class="eyebrow">Okej, kanske inte riktigt Uno...</p>
+            <h2>Fyra ben.<br><em>Fast ett helt annat äventyr.</em></h2>
+            <p>Du älskar djur. Och du har pratat om att komma ut och rida igen. Jag tänkte att det vore fint att ge dig något som vi faktiskt kan göra tillsammans.</p>
+          </div>
+          <div class="sun-medallion" aria-hidden="true">☼</div>
+        </section>
+
+        <section class="journey-section landscape-section" data-reveal>
+          <div class="section-number">02 / FÖRESTÄLL DIG</div>
+          <h2>Andalusien, <em>från hästryggen.</em></h2>
+          <p class="section-subtitle">Varm luft, långa stigar och berg som breder ut sig runt oss.</p>
+          <div class="landscape-tiles">
+            <article class="landscape-tile tile-riding" data-reveal>
+              <span class="tile-index">I.</span>
+              <div class="tile-illustration" aria-hidden="true">♞</div>
+              <h3>Hästar</h3>
+              <p>Vi ger oss ut bland olivträd och öppna vyer.</p>
+            </article>
+            <article class="landscape-tile tile-mountains" data-reveal>
+              <span class="tile-index">II.</span>
+              <div class="tile-illustration" aria-hidden="true">△</div>
+              <h3>Bergen</h3>
+              <p>En annan sorts utsikt över södra Spanien.</p>
+            </article>
+            <article class="landscape-tile tile-together" data-reveal>
+              <span class="tile-index">III.</span>
+              <div class="tile-illustration" aria-hidden="true">♡</div>
+              <h3>Vi två</h3>
+              <p>En upplevelse att längta till och minnas.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="journey-section destination-section" data-reveal>
+          <div class="destination-layout">
+            <div>
+              <div class="section-number">03 / DESTINATIONEN</div>
+              <p class="destination-overline">SPANIEN · COSTA DEL SOL</p>
+              <h2>Málaga<span class="destination-period">.</span></h2>
+              <p class="destination-lead">En av idéerna är att rida i Mijasbergen, nära Málaga. Det är ett tips från en hästvan vän, och det ser fantastiskt fint ut.</p>
+              <p class="destination-note">Om vi åker till södra Spanien i samband med bröllopet i augusti 2027 kan det vara ett perfekt tillfälle.</p>
+              <a class="destination-link" href="https://www.hippotours.se/resemaal/europa/andalusien/turridning+vid+malaga" target="_blank" rel="noopener noreferrer">
+                Kika på ridresan <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="destination-art" aria-hidden="true">
+              <div class="destination-sun"></div>
+              <div class="destination-mountain destination-mountain-one"></div>
+              <div class="destination-mountain destination-mountain-two"></div>
+              <div class="destination-pin"><span>✦</span> Mijasbergen</div>
+              <div class="destination-bottom">ANDALUCÍA</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="journey-section promise-section" data-reveal>
+          <div class="section-number">04 / SJÄLVA PRESENTEN</div>
+          <span class="promise-mark" aria-hidden="true">✳</span>
+          <h2>En ridupplevelse.<br><em>Du och jag.</em></h2>
+          <p>Vi har mycket som händer nästa år med bröllop och bröllopsresa. Därför är inget datum bestämt och ingenting bokat ännu.</p>
+          <p>Om Spanienresan blir av hittar vi något fint där. Annars hittar vi ett härligt alternativ här hemma. <strong>Vi bestämmer det tillsammans.</strong></p>
+          <div class="promise-rule"></div>
+          <p class="promise-signoff">Grattis på 30-årsdagen, älskling. Jag älskar dig. <span>♥</span></p>
+        </section>
+
+        <footer class="journey-footer">FÖR DIG, EMMA <span aria-hidden="true">✦</span> MED ALL MIN KÄRLEK</footer>
       </section>
 
       <p class="page-footer">Gjort med <span aria-label="kärlek">♥</span> bara för dig</p>
