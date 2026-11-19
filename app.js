@@ -23,7 +23,7 @@ form.addEventListener('submit', (event) => {
   if (input.value !== ACCESS_CODE) {
     input.setAttribute('aria-invalid', 'true');
     message.textContent = input.value.length === 6
-      ? 'Inte riktigt rätt. Försök igen ♡'
+      ? '⚠️ Inte riktigt rätt. Försök igen ⚠️'
       : 'Koden ska bestå av sex siffror.';
     message.classList.remove('ok');
     input.classList.remove('shake');
