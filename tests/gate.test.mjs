@@ -93,3 +93,18 @@ test('reduced-motion path also unlocks', () => {
   app.submit('961121');
   assert.equal(app['success-screen'].hidden, false);
 });
+
+test('unlock activates full-screen journey layout', () => {
+  const app = renderApp();
+  app.submit('961121');
+  assert.equal(app.body.classList.contains('is-unlocked'), true);
+});
+test('the three photo placements exist in the story', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+  assert.match(html, /class="gate-art"/);
+  assert.match(html, /class="riding-memory"/);
+  assert.match(css, /--gate-image/);
+  assert.match(css, /--explorer-image/);
+  assert.match(css, /--riding-image/);
+});

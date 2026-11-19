@@ -46,6 +46,7 @@ form.addEventListener('submit', (event) => {
       login.hidden = true;
       success.hidden = false;
       document.body.classList.remove('is-unlocking');
+      document.body.classList.add('is-unlocked');
       success.focus({ preventScroll: true });
       startJourney();
     }, reducedMotion ? 0 : 510);
