@@ -1,4 +1,9 @@
 :root {
+  --gate-image: url("./assets/gate-emma.webp");
+  --explorer-image: url("./assets/explorer-emma.webp");
+  --riding-image: url("./assets/horseback-together.webp");
+}
+:root {
   color-scheme: dark;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: #121b28;

@@ -17,7 +17,7 @@ Then open http://localhost:8000/ .
 - Landing screen asks for a six-digit code.
 - Correct code: `961121` (birthday in YYMMDD format).
 - Wrong or incomplete code: an accessible error message, no navigation.
-- Correct code shows a separate success screen. The later horse/Málaga reveal has **not yet been implemented**.
+- Correct code reveals a full-screen, scroll-based horse/Málaga story featuring Emma and photos from a previous ride.
 - Refreshing the page returns to the gate.
 
 **Security note:** This is deliberately not real authentication. Anyone can read the code or bypass the UI in a public static repository. Do not store private information behind this gate.
@@ -41,6 +41,8 @@ https://phdah.github.io/present-page/
 
 Do not write the URL on the physical gift card until you have confirmed it is live and the entry screen works on a phone.
 
-## Next step
+## Photos
 
-Replace the success placeholder with the animated, scroll-based riding-trip reveal. Keep all trip details conditional, not a confirmed booking.
+The three edited images live in `assets/` as compressed WebP files. The locked page uses the sad portrait, the unlocked hero features Emma's backpack adventure, and the horseback section blends in the riding photo. Their use is responsive and fades them into the color palette.
+
+Trip details are ideas, not a confirmed booking.
